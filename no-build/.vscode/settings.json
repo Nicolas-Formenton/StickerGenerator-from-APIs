@@ -1,6 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "imdb-api-stickers/src",
-        "imdb-250series-stickers/series-api/src"
-    ]
-}

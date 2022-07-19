@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -12,7 +14,7 @@ public class App {
     
         /* fazer uma conexão HTTP e buscar os top 250 filmes */
         /* String url = "https://imdb-api.com/en/API/Top250Movies/k_7gmger3z"; */
-        String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
+        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json";
         URI endereço = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereço).GET().build();
@@ -27,20 +29,25 @@ public class App {
         System.out.println(listaDeFilmes.get(0)); */
 
         /* exibir e manipular os dados */
-        for (Map<String,String> filme : listaDeFilmes) {
+        var generator = new StickerGenerator();
+        for (Map<String,String> filme : listaDeFilmes){
             
-            System.out.print("\u001b[48;2;42;122;228mTítulo: \u001b[m");
-            System.out.println(filme.get("title"));
+            String urlImagem = filme.get("image");
+            String titulo = filme.get("title");
+            
+            InputStream inputStream = new URL(urlImagem).openStream();
+            String nomeArquivo = titulo + ".png";
 
-            System.out.print("\u001b[48;2;42;122;228mPoster: \u001b[m");
-            System.out.println(filme.get("image"));
+            generator.criar(inputStream, nomeArquivo);
 
+            System.out.println("\u001b[48;2;42;122;228mTítulo: \u001b[m" + filme.get("title"));
+            System.out.println("\u001b[48;2;42;122;228mPoster: \u001b[m" + filme.get("image"));
+            System.out.println("\u001b[48;2;42;122;228mNota: \u001b[m" + filme.get("imDbRating"));
+
+            //Notas Arredondadas pareadas com as estrelas
             String imdbRating = filme.get("imDbRating");
             Double imdbRatingDouble = Double.parseDouble(imdbRating);
             long roundedRating = Math.round(imdbRatingDouble); 
-
-             System.out.print("\u001b[48;2;42;122;228mNota: \u001b[m");
-            System.out.println(filme.get("imDbRating"));
 
             //Estrelas            
             for(int i=0; i < roundedRating; i++){

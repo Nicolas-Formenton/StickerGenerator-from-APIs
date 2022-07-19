@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 public class App {
-
     public static void main(String[] args) throws Exception {
     
         /* fazer uma conexão HTTP e buscar os top 250 filmes */

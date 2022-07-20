@@ -52,7 +52,7 @@ public class StickerGenerator {
         graphics.drawString("TOPZERA", 320, 930);
         
         /* escrever a imagem em um arquivo (EM UMA PASTA[?])*/
-        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
+        ImageIO.write(novaImagem, "png", new File("C:\\Dev\\Imersão Alura\\StickerImages\\" + nomeArquivo));
 
 /*     public static void main(String[] args) throws Exception {
         var generator = new StickerGenerator();

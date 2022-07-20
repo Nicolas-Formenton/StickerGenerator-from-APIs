@@ -35,13 +35,13 @@ public class App {
             String titulo = filme.get("title");
             
             InputStream inputStream = new URL(urlImagem).openStream();
-            String nomeArquivo = titulo + ".png";
+            String nomeArquivo = titulo.replace(":", "-") + ".png";
 
             generator.criar(inputStream, nomeArquivo);
 
-            System.out.println("\u001b[48;2;42;122;228mTítulo: \u001b[m" + filme.get("title"));
-            System.out.println("\u001b[48;2;42;122;228mPoster: \u001b[m" + filme.get("image"));
-            System.out.println("\u001b[48;2;42;122;228mNota: \u001b[m" + filme.get("imDbRating"));
+            System.out.println("\u001b[48;2;42;122;228mTítulo:\u001b[m" + filme.get("title"));
+            System.out.println("\u001b[48;2;42;122;228mPoster:\u001b[m" + filme.get("image"));
+            System.out.println("\u001b[48;2;42;122;228mNota:\u001b[m" + filme.get("imDbRating"));
 
             //Notas Arredondadas pareadas com as estrelas
             String imdbRating = filme.get("imDbRating");
@@ -53,6 +53,7 @@ public class App {
                 System.out.print("\u2b50");
             }            
 
+            System.out.println();
             System.out.println();
             
         }

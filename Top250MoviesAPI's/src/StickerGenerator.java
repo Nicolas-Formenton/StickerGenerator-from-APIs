@@ -8,6 +8,7 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+
 public class StickerGenerator {
     
     public void criar(InputStream inputStream, String nomeArquivo) throws Exception{
@@ -30,32 +31,33 @@ public class StickerGenerator {
         /* criar uma nova imagem em memória com transparência e com tamanho novo*/
         int largura = imagemOriginal.getWidth();
         int altura = imagemOriginal.getHeight();
-        int novaAltura = altura + 250;
+        /* int novaAltura = altura + 250; */
 
-        BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
+        BufferedImage novaImagem = new BufferedImage(600, 1000, BufferedImage.TRANSLUCENT);
         
         /* copiar a imagem original para a nova imagem (em memória) */
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
-        graphics.drawImage(imagemOriginal, 0, 0, null);
+        graphics.drawImage(imagemOriginal, 0, 0, 600, 800, null);
         
         /* Minha Imagem */
-        graphics.drawImage(minhaImagem, 0, novaAltura - 250, 250, 250, null);
+        graphics.drawImage(minhaImagem, 0, 800, 200, 200, null);
         
         /* Configurar a fonte */
-        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 72);
+        var fonte = new Font("Impact", Font.BOLD, 48);
         graphics.setColor(Color.YELLOW);
         graphics.setFont(fonte);
+        
 
         /* escrever uma frase na nova imagem */
-        graphics.drawString("TOPZERA", (novaImagem.getWidth()/2), (novaAltura - 100));
+        graphics.drawString("TOPZERA", 320, 930);
         
-        /* escrever a imagem em um arquivo */
+        /* escrever a imagem em um arquivo (EM UMA PASTA[?])*/
         ImageIO.write(novaImagem, "png", new File(nomeArquivo));
-
-    }
 
 /*     public static void main(String[] args) throws Exception {
         var generator = new StickerGenerator();
         generator.criar();
     } */
+
+    }
 }

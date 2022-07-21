@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "Top250SeriesAPI's/src",
+        "Top250MoviesAPI's/src",
+        "linguagens-api/src/main/java/br/com/alura/linguagens/api"
+    ]
+}

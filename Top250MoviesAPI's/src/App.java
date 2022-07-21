@@ -5,32 +5,25 @@ import java.util.List;
 public class App {
     
     public static void main(String[] args) throws Exception {
-
-        /* fazer uma conexão HTTP */
-        /* ExtratorDeConteudo extrator = new ExtratorConteudoNASA();
-        String url = "https://api.mocki.io/v2/549a5d8b/NASA-APOD"; */
-
-        ExtratorDeConteudo extrator = new ExtratorConteudoIMDB();
-        String url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
-
         
+        /* fazer uma conexão HTTP */
+        
+        API minhaAPI = API.NASA;
 
         var clientHttp = new ClientHttp();
-        String json = clientHttp.buscaDados(url);
+        String json = clientHttp.buscaDados(minhaAPI.url());
 
         /* exibir e manipular os dados */
-        
-        List<Conteudo> conteudos = extrator.extraiConteudos(json);
+        List<Conteudo> conteudos = minhaAPI.extrator().extraiConteudos(json);
 
         var generator = new StickerGenerator();
         
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < conteudos.size(); i++) {
 
             Conteudo conteudo = conteudos.get(i);
             String nomeArquivo = conteudo.getTitulo().replace(":", "-") + ".png";
 
                 InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
-           /*  String nomeArquivo = "saida/"+ conteudo.getTitulo() +".png"; */
             
 
                 generator.criar(inputStream, nomeArquivo);

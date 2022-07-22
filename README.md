@@ -1,8 +1,6 @@
 # Bootcamp Alura - Java
 ![Bootcamp Alura - Java - Bootcamp Alura - Java (3)](https://user-images.githubusercontent.com/81488809/180497633-441c53a3-80cf-4195-a735-52d95dc5f5d9.png)
 
-
-
 ## Aula 01
 Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação...
 
@@ -88,3 +86,6 @@ Assim, conseguimos rodar o aplicativo a partir do `.jar`, digitando `java -jar .
 Iremos fazer o deploy no __Heroku__, mas antes temos que definir a versão do Java a ser compilada, criando um arquvio `system.properties` com a informação da versão dentro, que seria `java.runtime.version = 18` (18 é a minha versão, coloque a que estiver usando!).
 
 Meu link de API no __Heroku__: https://nicolas-linguagens-api.herokuapp.com/linguagens
+
+Para rodar o projeto em sua máquina, vá ate o diretório `src` dentro de `Top250MoviesAPI's` usando `cd Top250MoviesAPI's/src` em seu terminal.
+Assim que estiver dentro da pasta, digite `Javac *.java` para compilar o projeto e, em seguida, digite `Java App` para rodar!

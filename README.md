@@ -1,5 +1,6 @@
 # Bootcamp Alura - Java
-![Bootcamp Alura - Java - Bootcamp Alura - Java (2)](https://user-images.githubusercontent.com/81488809/180497143-72ae1471-6760-4c98-958a-e413cfeb3f7b.png)
+![Bootcamp Alura - Java - Bootcamp Alura - Java (3)](https://user-images.githubusercontent.com/81488809/180497633-441c53a3-80cf-4195-a735-52d95dc5f5d9.png)
+
 
 
 ## Aula 01

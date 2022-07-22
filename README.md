@@ -3,7 +3,7 @@ Para rodar o projeto em sua máquina, vá ate o diretório `src` dentro de `Top2
 Assim que estiver dentro da pasta, digite `Javac *.java` para compilar o projeto e, em seguida, digite `Java App` para rodar!
 <hr>
 
-![Bootcamp Alura - Java - Bootcamp Alura - Java (3)](https://user-images.githubusercontent.com/81488809/180497633-441c53a3-80cf-4195-a735-52d95dc5f5d9.png)
+![Bootcamp Alura - Java - Bootcamp Alura - Java (5)](https://user-images.githubusercontent.com/81488809/180569506-e22a151d-f8fb-48f1-a8f9-d401f00aebf5.png)
 
 ## Aula 01
 Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação...
@@ -91,6 +91,6 @@ Iremos fazer o deploy no __Heroku__, mas antes temos que definir a versão do Ja
 
 ![image](https://user-images.githubusercontent.com/81488809/180518047-c3b1a49a-54a7-4edc-b395-87d96108d54e.png)
 
-Meu link de API no __Heroku__: https://nicolas-linguagens-api.herokuapp.com/linguagens
+Meu link da API no __Heroku__: https://nicolas-linguagens-api.herokuapp.com/linguagens
 
 

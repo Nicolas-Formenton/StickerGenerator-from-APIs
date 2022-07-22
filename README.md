@@ -5,7 +5,7 @@ Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os 
 
 Primeiro fizemos o request da conexão HTTP da API do IMDB
 ```java
-String url = "https://api.mocki.io/v2/549a5d8Top250TVs"; /* + apikey; */
+String url = "https://api.mocki.io/v2/549a5d8Top250TVs";
 URI endereço = URI.create(url);
 var client = HttpClient.newHttpClient();
 var request = HttpRequest.newBuilder(endereço).GET(build();
@@ -42,3 +42,34 @@ Pegaremos os filmes do IMDb e gerar figurinhas com os pôsteres, aproveitando pa
 
 ## Aula 04
 Vamos construir uma API REST para expor nosso próprio conteúdo, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.
+
+Utilizei o `MongoDB` para armazenar nossa API, também utilizei o `Postman`(Desktop Version, pois a API ainda está em localhost) para conseguir ver (`@GetMapping`) as informações contidas na API como também atualiza-las(`@PostMapping`) diretamente por lá.
+
+Removi o request do HTTP do código principal para ficar mais enxuto e prático de se mexer, criando uma propria class `ClientHttp`
+
+Também atribui todas as API's para uma class própria `enum API`, ficando mais fácil para modificar elas, caso necessário...
+
+```java
+public enum API {
+
+    IMDB("https://api.mocki.io/v2/549a5d8b/Top250Movies", new ExtratorConteudoIMDB()),
+    NASA("https://api.mocki.io/v2/549a5d8b/NASA-APOD", new ExtratorConteudoNASA()),
+    MongoDB("http://localhost:8080/linguagens", new ExtratorConteudoMongoDB());
+
+    private String url;
+    private ExtratorDeConteudo extrator;
+
+    API(String url, ExtratorDeConteudo extrator){
+        this.url = url;
+        this.extrator = extrator;
+    }
+
+    public String url(){
+        return url;
+    }
+
+    public ExtratorDeConteudo extrator(){
+        return extrator;
+    }
+}
+```

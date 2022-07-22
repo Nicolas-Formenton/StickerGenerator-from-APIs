@@ -78,3 +78,13 @@ public enum API {
     }
 }
 ```
+# Aula 05
+Vamos tornar nossa aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem.
+
+Primeiro, instalei o Maven (https://maven.apache.org/download.cgi) e em seguida, dentro da pasta `linguagens-api` usei o comando `./mvnw package` para gerar o arquivo `.jar` dentro da pasta `target` com todas as bibliotecas utilizadas dentro.
+
+Assim, conseguimos rodar o aplicativo a partir do `.jar`, digitando `java -jar .\linguagens-api-0.0.1-SNAPSHOT.jar`
+
+Iremos fazer o deploy no __Heroku__, mas antes temos que definir a versão do Java a ser compilada, criando um arquvio `system.properties` com a informação da versão dentro, que seria `java.runtime.version = 18` (18 é a minha versão, coloque a que estiver usando!).
+
+Meu link de API no __Heroku__: https://nicolas-linguagens-api.herokuapp.com/linguagens

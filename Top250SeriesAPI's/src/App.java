@@ -52,7 +52,6 @@ public class App {
             System.out.print("\u2b50");
             }
 
-
             System.out.println();
             
         }

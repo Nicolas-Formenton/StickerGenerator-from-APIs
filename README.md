@@ -1,4 +1,6 @@
 # Bootcamp Alura - Java
+![Bootcamp Alura - Java - Bootcamp Alura - Java (2)](https://user-images.githubusercontent.com/81488809/180497143-72ae1471-6760-4c98-958a-e413cfeb3f7b.png)
+
 
 ## Aula 01
 Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação...
@@ -36,6 +38,8 @@ _Resultado_
 
 ## Aula 02
 Criarei um gerador de figurinhas explorando outras bibliotecas nativas do Java, para que possamos enviar por Whatsapp os nossos filmes preferidos!
+
+`StickerGenerator.java`
 
 ## Aula 03
 Pegaremos os filmes do IMDb e gerar figurinhas com os pôsteres, aproveitando para melhorar nosso código com as refatorações necessárias para torná-lo mais flexível e fácil de entender.

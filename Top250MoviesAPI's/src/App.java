@@ -8,7 +8,7 @@ public class App {
         
         /* fazer uma conexão HTTP */
         
-        API minhaAPI = API.NASA;
+        API minhaAPI = API.MongoDB;
 
         var clientHttp = new ClientHttp();
         String json = clientHttp.buscaDados(minhaAPI.url());

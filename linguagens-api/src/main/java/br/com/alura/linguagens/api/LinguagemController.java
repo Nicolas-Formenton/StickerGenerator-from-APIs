@@ -1,8 +1,13 @@
 package br.com.alura.linguagens.api;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,23 +22,30 @@ public class LinguagemController {
 
     @GetMapping("/linguagens")
     public List<Linguagem> obterLinguagens(){
-        
         //abrir conexao do Banco de Dados
-        List<Linguagem> linguagens = repositorio.findAll();
-        return linguagens;
+        return repositorio.findAll();
     }
 
     @PostMapping("/linguagens")
     public Linguagem adicionarLinguagem(@RequestBody Linguagem linguagem){
-        Linguagem linguagemSalva = repositorio.save(linguagem);
-        return linguagemSalva;
+        return repositorio.save(linguagem);
     }
-
-/*     public Linguagem deletarLinguaguem(@RequestBody Linguagem linguagem){
-        Linguagem linguagemDeleta = repositorio.delete(linguagem);
-        return linguagemDeleta;
+    
+/* 
+    @DeleteMapping("/linguagens/{id}")
+    public ResponseEntity<Object> deletarLinguagem(@PathVariable(value = "id") String id){
+        Optional<Linguagem> linguagem = repositorio.findById(id);
+        
+        if(linguagem.isPresent()){
+            repositorio.delete(linguagem.get());
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    
     } */
 }
+
+
 //Teste
 /*     @GetMapping("/linguagem-preferida")
     public String processaLinguagemPreferida(){

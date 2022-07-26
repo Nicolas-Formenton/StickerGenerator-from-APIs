@@ -3,7 +3,7 @@ Para rodar o projeto em sua máquina, vá ate o diretório `src` dentro de `Top2
 Assim que estiver dentro da pasta, digite `Javac *.java` para compilar o projeto e, em seguida, digite `Java App` para rodar!
 <hr>
 
-![Bootcamp Alura - Java - Bootcamp Alura - Java (7)](https://user-images.githubusercontent.com/81488809/180569860-be2a368c-e242-4db4-9cab-e3e2b46ea669.png)
+![Bootcamp Alura - Java - Bootcamp Alura - Java (7)](https://user-images.githubusercontent.com/81488809/180569860-be2a368c-e242-4db4-9cab-e3e2b46ea669.png#vitrinedev)
 
 ## Aula 01
 Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação...

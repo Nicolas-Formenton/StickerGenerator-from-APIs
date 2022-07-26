@@ -3,7 +3,7 @@ Para rodar o projeto em sua máquina, vá ate o diretório `src` dentro de `Top2
 Assim que estiver dentro da pasta, digite `Javac *.java` para compilar o projeto e, em seguida, digite `Java App` para rodar!
 <hr>
 
-![Bootcamp Alura - Java - Bootcamp Alura - Java (7)](https://user-images.githubusercontent.com/81488809/180569860-be2a368c-e242-4db4-9cab-e3e2b46ea669.png)
+![Bootcamp Alura - Java - Bootcamp Alura - Java (7)](https://user-images.githubusercontent.com/81488809/180569860-be2a368c-e242-4db4-9cab-e3e2b46ea669.png#vitrinedev)
 
 ## Aula 01
 Vamos construir uma aplicação do zero para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação...
@@ -88,6 +88,8 @@ Primeiro, instalei o Maven (https://maven.apache.org/download.cgi) e em seguida,
 Assim, conseguimos rodar o aplicativo a partir do `.jar`, digitando `java -jar .\linguagens-api-0.0.1-SNAPSHOT.jar`
 
 Iremos fazer o deploy no __Heroku__, mas antes temos que definir a versão do Java a ser compilada, criando um arquvio `system.properties` com a informação da versão dentro, que seria `java.runtime.version = 18` (18 é a minha versão, coloque a que estiver usando!).
+
+Para atualizar o deploy no __Heroku__, utilizar `heroku git:remote -a nicolas-linguagens-api` com os commits feitos para indicar que é para ir para o git do heroku, e assim que indicar que está no remote do heroku, utilizar `git push heroku main` para atualizar! 
 
 ![image](https://user-images.githubusercontent.com/81488809/180518047-c3b1a49a-54a7-4edc-b395-87d96108d54e.png)
 

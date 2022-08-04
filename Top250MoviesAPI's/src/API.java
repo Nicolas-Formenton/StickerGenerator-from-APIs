@@ -2,7 +2,7 @@ public enum API {
 
     IMDB("https://api.mocki.io/v2/549a5d8b/Top250Movies", new ExtratorConteudoIMDB()),
     NASA("https://api.mocki.io/v2/549a5d8b/NASA-APOD", new ExtratorConteudoNASA()),
-    MongoDB("https://nicolas-linguagens-api.herokuapp.com/linguagens", new ExtratorConteudoMongoDB());
+    MongoDB("https://nicolas-api-linguagens.herokuapp.com/linguagens", new ExtratorConteudoMongoDB());
 
     private String url;
     private ExtratorDeConteudo extrator;

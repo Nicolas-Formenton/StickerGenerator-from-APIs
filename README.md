@@ -93,6 +93,6 @@ Para atualizar o deploy no __Heroku__, utilizar `heroku git:remote -a nicolas-li
 
 ![image](https://user-images.githubusercontent.com/81488809/180518047-c3b1a49a-54a7-4edc-b395-87d96108d54e.png)
 
-Meu link da API no __Heroku__: https://nicolas-linguagens-api.herokuapp.com/linguagens
+Meu link da API no __Heroku__: https://nicolas-api-linguagens.herokuapp.com/linguagens
 
 
